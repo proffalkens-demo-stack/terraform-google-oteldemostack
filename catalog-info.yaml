@@ -1,0 +1,31 @@
+# SPDX-FileCopyrightText: 2022 Matthew Macdonald-Wallace <matt@doics.co>
+#
+# SPDX-License-Identifier: MIT-Modern-Variant
+
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: terraform-google-oteldemostack
+  description: |
+    Terraform code to launch the google cloud components of the demostack
+  annotations:
+    github.com/project-slug: proffalkens-demo-stack/terraform-google-oteldemostack
+spec:
+  type: library
+  owner: Proffalken
+  lifecycle: development
+  consumesApis:
+---
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: terraform-google-oteldemostack
+  description: Terraform code to launch the google cloud components of the demo stack
+spec:
+  type: public
+  lifecycle: production
+  owner: matt@doics.co
+  definition: |
+    type: Terraform
+    inputs:
+    outputs:
