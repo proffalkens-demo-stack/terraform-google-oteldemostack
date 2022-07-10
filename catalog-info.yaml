@@ -14,7 +14,6 @@ spec:
   type: library
   owner: Proffalken
   lifecycle: development
-  consumesApis:
 ---
 apiVersion: backstage.io/v1alpha1
 kind: API
